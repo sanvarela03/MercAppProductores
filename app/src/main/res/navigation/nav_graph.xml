@@ -52,4 +52,24 @@
         android:name="com.example.mercappproductores.view.ProductoFragment"
         android:label="fragment_producto"
         tools:layout="@layout/fragment_producto" />
+    <fragment
+        android:id="@+id/productosFragment"
+        android:name="com.example.mercappproductores.view.ProductosFragment"
+        android:label="fragment_productos"
+        tools:layout="@layout/fragment_productos" />
+    <fragment
+        android:id="@+id/notificacionFragment"
+        android:name="com.example.mercappproductores.view.NotificacionFragment"
+        android:label="fragment_notificacion"
+        tools:layout="@layout/fragment_notificacion" />
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.mercappproductores.view.CalendarioFragment"
+        android:label="fragment_calendario"
+        tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="com.example.mercappproductores.view.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" />
 </navigation>
