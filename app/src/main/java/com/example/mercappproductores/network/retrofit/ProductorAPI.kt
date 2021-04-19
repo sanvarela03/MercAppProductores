@@ -9,7 +9,7 @@ import retrofit2.http.*
 
 
 
-const val BASE_URL = "http://192.168.0.108:8090/mercaleaf/productores/"
+//const val BASE_URL = "http://192.168.0.108:8090/mercaleaf/productores/"
 
 interface ProductorAPI {
     companion object Factory {

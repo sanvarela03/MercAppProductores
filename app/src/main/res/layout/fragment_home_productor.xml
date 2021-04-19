@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,33 +10,80 @@
             type="com.example.mercappproductores.viewModel.HomeProductorViewModel" />
     </data>
 
-    <FrameLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.mercappproductores.view.HomeProductorFragment">
+        tools:openDrawer="start">
 
-        <!-- TODO: Update blank fragment layout -->
-        <ScrollView
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    android:elevation="0dp"
+                    app:menu="@menu/menu_superior"
+                    app:navigationIcon="@drawable/ic_menu_24dp"
+                    app:title="MercApp Campesino" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!-- Contenido de la pantalla -->
+            <!-- Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar -->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                <TextView
+<!--                <fragment-->
+<!--                    android:id="@id/productosFragment"-->
+<!--                    android:name="com.example.mercappproductores.view.ProductosFragment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    tools:layout="@layout/fragment_productos" />-->
+
+                <fragment
+                    android:id="@+id/my_nav_host_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="IdUsuario" />
+                    android:layout_weight="1"
+                    app:navGraph="@navigation/nav_graph"/>
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_nav_view"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="NombreUsuario" />
+                    app:menu="@menu/menu_navegacion_inferior" />
             </LinearLayout>
-        </ScrollView>
 
-    </FrameLayout>
+            <!-- /Contenido de la pantalla -->
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/id_vista_navegacion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/menu_desplegable_izquierdo"
+            app:headerLayout="@layout/header_del_menu_desplegable_izquierdo"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

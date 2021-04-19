@@ -19,9 +19,10 @@ class CalendarioFragment : Fragment() {
 
         calendarioViewModel.controladorDeNavegacion = findNavController()
         val vinculacion = FragmentCalendarioBinding.inflate(inflater)
+        vinculacion.lifecycleOwner = this
         vinculacion.viewModelCalendario = calendarioViewModel
 
-                return vinculacion.root
+        return vinculacion.root
     }
 
 

@@ -6,7 +6,7 @@ import androidx.navigation.NavController
 
 class CalendarioViewModel : ViewModel() {
 
-    val Mensaje = "hola"
+    val Mensaje = "Calendario de entregas"
 
     lateinit var controladorDeNavegacion : NavController
 }

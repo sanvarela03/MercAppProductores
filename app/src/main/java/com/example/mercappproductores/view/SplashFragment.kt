@@ -23,10 +23,10 @@ class SplashFragment : Fragment() {
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val binding = FragmentSplashBinding.inflate(inflater)
-        binding.lifecycleOwner = this
-        binding.viewModelSplash = splashViewModel
-        return binding.root
+        val vinculacion = FragmentSplashBinding.inflate(inflater)
+        vinculacion.lifecycleOwner = this
+        vinculacion.viewModelSplash = splashViewModel
+        return vinculacion.root
     }
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +40,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun actualizarInterfazUsuario() {
+        findNavController().popBackStack()
         findNavController().navigate(R.id.iniciarSesionFragmentID)
     }
 

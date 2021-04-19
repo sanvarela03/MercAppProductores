@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/id_item_mi_cuenta"
+        android:contentDescription="Para ver la cuenta del usuario"
+        android:title="Mi cuenta"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_cuenta"/>
+    <item
+        android:id="@+id/id_item_historial_pedidos"
+        android:contentDescription="Para ver el historial de pedidos"
+        android:title="Historial de pedidos"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_baseline_history_24"/>
+    <item
+        android:id="@+id/id_item_ayuda"
+        android:contentDescription="Para ver información de ayuda"
+        android:title="Ayuda"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_ayuda"/>
+    <item
+        android:id="@+id/id_item_cerrar_sesion"
+        android:contentDescription="Para salir de la cuenta"
+        android:title="Cerrar sesión"
+        android:icon="@drawable/ic_baseline_logout_24"
+        app:showAsAction="never" />
+</menu>
