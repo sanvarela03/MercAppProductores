@@ -7,9 +7,9 @@ class HomeProductorViewModel:ViewModel() {
 
     val Id = ""
     val usuario  = ""
-    val nombre  = ""
-    val correo  = ""
-    lateinit var navController:NavController
+    val nombre  = "Santiago"
+    val correo  = "svarela03@uan.edu.co"
+    //lateinit var navController:NavController
 
 
 

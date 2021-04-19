@@ -3,53 +3,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/productosFragment">
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.mercappproductores.view.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_logInFragment"
-            app:destination="@id/iniciarSesionFragmentID" />
-    </fragment>
+        tools:layout="@layout/fragment_splash"></fragment>
     <fragment
         android:id="@+id/iniciarSesionFragmentID"
         android:name="com.example.mercappproductores.view.IniciarSesionFragment"
         android:label="fragment_log_in"
-        tools:layout="@layout/fragment_iniciar_sesion" >
+        tools:layout="@layout/fragment_iniciar_sesion">
         <argument
             android:name="numero"
-            app:argType="integer"
-            android:defaultValue="1"/>
+            android:defaultValue="1"
+            app:argType="integer" />
 
-        <action
-            android:id="@+id/action_logInFragment_to_regsitrarseFragment"
-            app:destination="@id/regsitrarseFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-    <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.mercappproductores.view.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
     <fragment
         android:id="@+id/regsitrarseFragment"
         android:name="com.example.mercappproductores.view.RegsitrarseFragment"
         android:label="fragment_regsitrarse"
-        tools:layout="@layout/fragment_regsitrarse" />
-    <fragment
-        android:id="@+id/homeProductorFragment"
-        android:name="com.example.mercappproductores.view.HomeProductorFragment"
-        android:label="fragment_home_productor"
-        tools:layout="@layout/fragment_home_productor" />
+        tools:layout="@layout/fragment_regsitrarse"></fragment>
     <fragment
         android:id="@+id/productoFragment"
         android:name="com.example.mercappproductores.view.ProductoFragment"
         android:label="fragment_producto"
         tools:layout="@layout/fragment_producto" />
+    <fragment
+        android:id="@+id/productosFragment"
+        android:name="com.example.mercappproductores.view.ProductosFragment"
+        android:label="fragment_productos"
+        tools:layout="@layout/fragment_productos" />
+    <fragment
+        android:id="@+id/notificacionFragment"
+        android:name="com.example.mercappproductores.view.NotificacionesFragment"
+        android:label="fragment_notificacion"
+        tools:layout="@layout/fragment_notificaciones" />
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.mercappproductores.view.CalendarioFragment"
+        android:label="fragment_calendario"
+        tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="com.example.mercappproductores.view.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" />
+
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.example.mercappproductores.view.CuentaFragment"
+        android:label="CuentaFragment"
+        tools:layout="@layout/fragment_cuenta" />
+    <fragment
+        android:id="@+id/historialDePedidosFragment"
+        android:name="com.example.mercappproductores.view.HistorialDePedidosFragment"
+        android:label="HistorialDePedidosFragment"
+        tools:layout="@layout/fragment_historial_de_pedidos" />
+    <fragment
+        android:id="@+id/fragmentAyuda"
+        android:name="com.example.mercappproductores.view.FragmentAyuda"
+        android:label="FragmentAyuda"
+        tools:layout="@layout/fragment_ayuda" />
+    <fragment
+        android:id="@+id/verProductoFragment"
+        android:name="com.example.mercappproductores.view.VerProductoFragment"
+        android:label="VerProductoFragment"
+        tools:layout="@layout/fragment_ver_producto" />
+    <fragment
+        android:id="@+id/agregarProductoFragment"
+        android:name="com.example.mercappproductores.view.AgregarProductoFragment"
+        android:label="AgregarProductoFragment"
+        tools:layout="@layout/fragment_agregar_producto" />
 </navigation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_pedido_pendiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID_PEDIDO" />
+
+    <TextView
+        android:id="@+id/id_pedido_pendiente_transportador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TRANSPORTADOR" />
+
+    <TextView
+        android:id="@+id/id_pedido_pendiente_fecha_recogida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FECHA_RECOGIDA" />
+
+    <TextView
+        android:id="@+id/id_pedido_pendiente_ganacia_productor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GANANCIA" />
+
+</LinearLayout>

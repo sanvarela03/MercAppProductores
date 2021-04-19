@@ -1,4 +1,4 @@
-package com.example.mercappproductores.view
+package com.example.mercappproductores.view.utilities
 
 open class Evento<out T> (private val contenido : T){
     var haSidoManejado = false
